@@ -52,8 +52,14 @@ export default [
     component: './TableList',
   },
   {
+    name: 'test-page',
+    icon: 'table',
+    path: '/testPage',
+    component: './TestPage',
+  },
+  {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/testPage',
   },
   {
     path: '*',

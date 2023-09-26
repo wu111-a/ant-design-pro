@@ -1,0 +1,38 @@
+@primaryColor: skyblue;
+@hovercolor:rgba (rgb(28, 174, 231),.1);
+
+// 增加常用属性简写
+@d: display;
+@jc: justify-content;
+@ai: align-items;
+@br: border-radius;
+@fd: flex-direction;
+@b: background;
+@o: overflow;
+@fw: flex-wrap;
+@w: width;
+@h: height;
+@bc: background-color;
+
+// 增加常用样式
+.center() {
+  @{d}: flex;
+  @{jc}: center;
+  @{ai}: center;
+}
+
+.h-center() {
+  @{d}: flex;
+  @{ai}: center;
+}
+
+.column() {
+  .center();
+  @{fd}: column;
+}
+
+.h-color(@c:@hoverColor) {
+  &:hover {
+    @{b}: @c;
+  }
+}
